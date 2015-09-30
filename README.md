@@ -15,7 +15,7 @@ The role is available via:
 
 This roles depends on the following roles:
 
-- [Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/2625)
+- [Dynatrace-WebServer-Agent](https://galaxy.ansible.com/list#/roles/5324)
 
 ## Description
 
