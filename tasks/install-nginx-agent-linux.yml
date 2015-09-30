@@ -1,0 +1,6 @@
+- include: linux/install-dependencies-apt.yml
+  when: ansible_pkg_mgr == "apt"
+- include: linux/install-dependencies-yum.yml
+  when: ansible_pkg_mgr == "yum"
+
+- include: linux/install-nginx-agent.yml

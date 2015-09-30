@@ -1,0 +1,14 @@
+---
+- hosts: test-kitchen
+
+  pre_tasks:
+  - name: Install 'nginx'
+    apt: pkg=nginx state=present
+    when: ansible_system == "Linux" and ansible_pkg_mgr == "apt"
+  - name: Install 'nginx'
+    yum: pkg=nginx state=present
+    when: ansible_system == "Linux" and ansible_pkg_mgr == "yum"
+
+  roles:
+  - role: dynatrace.Dynatrace-NGINX-Agent
+    dynatrace_wsagent_linux_installer_file_url: http://10.0.2.2/dynatrace/dynatrace-wsagent.tar

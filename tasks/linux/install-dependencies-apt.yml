@@ -1,0 +1,21 @@
+---
+- name: Update APT cache
+  apt: update_cache=yes
+  sudo: yes
+  ignore_errors: yes
+
+- name: Install package 'nginx-full-dbg'
+  apt: pkg=nginx-full-dbg state=present
+  sudo: yes
+
+- name: Install package 'gdb'
+  apt: pkg=gdb state=present
+  sudo: yes
+
+- name: Install package 'elfutils'
+  apt: pkg=elfutils state=present
+  sudo: yes
+
+- name: Install package 'bc'
+  apt: pkg=bc state=present
+  sudo: yes

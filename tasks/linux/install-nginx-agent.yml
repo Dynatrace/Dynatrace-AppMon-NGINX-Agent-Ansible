@@ -1,0 +1,10 @@
+- name: Inject the Dynatrace NGINX Agent into NGINX's config file {{ dynatrace_nginx_agent_linux_nginx_config_path }}
+  lineinfile: >
+    dest={{ dynatrace_nginx_agent_linux_nginx_config_path }}
+    regexp='env LD_PRELOAD="{{ dynatrace_nginx_agent_linux_agent_path }}";'
+    line='env LD_PRELOAD="{{ dynatrace_nginx_agent_linux_agent_path }}";'
+    insertafter=EOF
+    state={{ dynatrace_nginx_agent_state }}
+    create=yes
+    backup=yes
+  sudo: yes

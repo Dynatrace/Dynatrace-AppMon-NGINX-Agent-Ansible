@@ -1,0 +1,16 @@
+---
+- name: Install package 'nginx-debug'
+  apt: pkg=nginx-debug state=present
+  sudo: yes
+
+- name: Install package 'gdb'
+  apt: pkg=gdb state=present
+  sudo: yes
+
+- name: Install package 'elfutils'
+  apt: pkg=elfutils state=present
+  sudo: yes
+
+- name: Install package 'bc'
+  apt: pkg=bc state=present
+  sudo: yes
