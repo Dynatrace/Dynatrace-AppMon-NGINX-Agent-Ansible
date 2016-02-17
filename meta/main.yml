@@ -18,5 +18,5 @@ galaxy_info:
   galaxy_tags:
   - monitoring
 dependencies:
-- role: dynatrace.Dynatrace-WebServer-Agent
+- role: Dynatrace.Dynatrace-WebServer-Agent
   dynatrace_wsagent_name: "{{ dynatrace_nginx_agent_name }}"

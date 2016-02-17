@@ -10,5 +10,5 @@
     when: ansible_system == "Linux" and ansible_pkg_mgr == "yum"
 
   roles:
-  - role: dynatrace.Dynatrace-NGINX-Agent
+  - role: Dynatrace.Dynatrace-NGINX-Agent
     dynatrace_wsagent_linux_installer_file_url: http://10.0.2.2/dynatrace/dynatrace-wsagent.tar

@@ -37,7 +37,7 @@ As defined in ```defaults/main.yml```:
 ```
 - hosts: all
   roles:
-    - role: dynatrace.Dynatrace-NGINX-Agent
+    - role: Dynatrace.Dynatrace-NGINX-Agent
 ```
 
 ## Testing
