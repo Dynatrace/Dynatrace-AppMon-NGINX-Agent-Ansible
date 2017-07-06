@@ -1,6 +1,6 @@
 # Dynatrace-NGINX-Agent-Ansible
 
-This Ansible role installs and configures the Dynatrace WebServer Agent of the [Dynatrace Application Monitoring](http://www.dynatrace.com/en/products/application-monitoring.html) solution for NGINX.
+This Ansible role installs and configures the Dynatrace AppMon WebServer Agent of the [Dynatrace AppMon](https://www.dynatrace.com/support/doc/appmon/) solution for NGINX.
 
 **Note:** you will have to restart the web server after placing the agent.
 
@@ -19,7 +19,7 @@ This roles depends on the following roles:
 
 ## Description
 
-This role downloads and installs the most recent version of the Dynatrace WebServer Agent package from [http://downloads.dynatracesaas.com](http://downloads.dynatracesaas.com) and integrates the agent with NGINX. The default download link can be overridden via the `dynatrace_wsagent_linux_installer_file_url` attribute. Alternatively, you can place the installer artifact as `dynatrace-wsagent.tar` in the role's `files` directory from where it will be picked up during the installation. Please refer to `defaults/main.yml` for a list of supported attributes.
+This role downloads and installs the most recent version of the Dynatrace AppMon WebServer Agent package from [http://downloads.dynatracesaas.com](http://downloads.dynatracesaas.com) and integrates the agent with NGINX. The default download link can be overridden via the `dynatrace_wsagent_linux_installer_file_url` attribute. Alternatively, you can place the installer artifact as `dynatrace-wsagent.tar` in the role's `files` directory from where it will be picked up during the installation. Please refer to `defaults/main.yml` for a list of supported attributes.
 
 ## Role Variables
 
@@ -29,7 +29,7 @@ As defined in ```defaults/main.yml```:
 |-------------------------------------------------|------------------------------------------|-------------|
 | *dynatrace_nginx_agent_linux_agent_path*        | /opt/dynatrace/agent/lib64/libdtagent.so | The path to the Agent library. |
 | *dynatrace_nginx_agent_linux_nginx_config_path* | /etc/nginx/nginx.conf                    | The path to NGINX's config file. |
-| *dynatrace_nginx_agent_name*                    | nginx-dtwsagent                          | The name the Web Server Agent as it appears in Dynatrace. |
+| *dynatrace_nginx_agent_name*                    | nginx-dtwsagent                          | The name the Web Server Agent as it appears in Dynatrace AppMon. |
 | *dynatrace_nginx_agent_state*                   | present                                  | Whether the Agent shall be ```present``` or ```absent```. |
 
 ## Example Playbook
@@ -68,7 +68,7 @@ By default, we run our tests inside [Docker](https://www.docker.com/) containers
 
 ### Presentations
 
-- [Automated Deployments (of Dynatrace) with Ansible](http://www.slideshare.net/MartinEtmajer/automated-deployments-with-ansible)
+- [Automated Deployments (of Dynatrace AppMon) with Ansible](http://www.slideshare.net/MartinEtmajer/automated-deployments-with-ansible)
 - [Test-Driven Infrastructure with Ansible, Test Kitchen, Serverspec and RSpec](http://www.slideshare.net/MartinEtmajer/testing-ansible-roles-with-test-kitchen-serverspec-and-rspec-48185017)
 
 ## Problems? Questions? Suggestions?
